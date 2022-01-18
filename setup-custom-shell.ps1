@@ -82,6 +82,8 @@ $shutdown_device = 2
 $do_nothing = 3
 
 $ShellLauncherClass.SetDefaultShell("explorer.exe", $restart_device)
+
+$DefaultShellObject = $ShellLauncherClass.GetDefaultShell()
 "`nDefault Shell is set to " + $DefaultShellObject.Shell + " and the default action is set to " + $DefaultShellObject.defaultaction
 
 $ShellLauncherClass.SetEnabled($TRUE)
@@ -91,7 +93,6 @@ $ShellLauncherClass.RemoveCustomShell($ft_SID)
     write-host "There is likely no existing shell"
 }
 $ShellLauncherClass.SetCustomShell($ft_SID, "python -muvicorn footron_windows:app --reload --host 0.0.0.0", ($null), ($null), $restart_shell)
-$DefaultShellObject = $ShellLauncherClass.GetDefaultShell()
 
 "`nCurrent settings for custom shells:"
 Get-WmiObject -namespace $NAMESPACE -computer $COMPUTER -class WESL_UserSetting | Select Sid, Shell, DefaultAction
