@@ -30,7 +30,14 @@ Base system is Windows Enterprise.
   - Edit BASE_EXPERIENCE_PATH in app.py to wherever you end up putting experiences (we should be doing this dynamically with an environmental variable, but we haven't really experimented with setting environmental variables for a custom Windows shell launcher)
 - Create the path you specified in BASE_EXPERIENCE_PATH and fill it with experiences. We should document the structure required here better, but it will probably be easiest to just do a Windows network copy from an existing working copy if one exists.
 - Setup and pair controllers
+- Enable VSync:
+  - Open NVIDIA Control Panel (right click on desktop)
+  - Manage 3D settings -> Vertical sync -> Set it to "On"
+- Try manually running every experience executable and installing prerequisites as prompted
 - This should hopefully work after a restart. But it probably won't. So you'll likely have to debug things.
+- Once the `ft` user has logged in automatically, launch every experience and set them to fullscreen using in-game menus where applicable
+- (This should be updated to be better) Once you've setup capture, set the display resolution to 2736x1216, then go to advanced adapter settings and click "show all modes" and change to the 59hz variant of the resolution
+
 
 ## TODO
 
