@@ -30,6 +30,7 @@ Base system is Windows Enterprise.
   - Edit BASE_EXPERIENCE_PATH in app.py to wherever you end up putting experiences (we should be doing this dynamically with an environmental variable, but we haven't really experimented with setting environmental variables for a custom Windows shell launcher)
 - Create the path you specified in BASE_EXPERIENCE_PATH and fill it with experiences. We should document the structure required here better, but it will probably be easiest to just do a Windows network copy from an existing working copy if one exists.
 - Setup and pair controllers
+- In Settings -> Power & sleep, set both "Screen" and "Sleep" timeouts to "never" (side note: this is unbelievably important and the solution to an issue we spent months debugging)
 - Enable VSync:
   - Open NVIDIA Control Panel (right click on desktop)
   - Manage 3D settings -> Vertical sync -> Set it to "On"
