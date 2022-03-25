@@ -1,8 +1,8 @@
 # Footron Windows Setup
 
-Base system is Windows Enterprise.
+Base system is Windows 10 Enterprise.
 
-- Install Windows Enterprise
+- Install Windows 10 Enterprise.
 - Install Python from python.org (I think that's a better way to do it than using the Microsoft store based on past experience, but this might not be true)
   - Enable "Add Python 3.x to PATH"
   - Use custom install and enable "Install for all users"
